@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ODSRM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body>
+<div style="height: 100vh;">  
+<div class="login-page">
+  <div class="logo">
+    <a><img src="images/Ondo-State.jpg"/></a>
+  </div>
+  <div class="form">
+    <form class="login-form" action="dashboard.html">
+      <input type="text" placeholder="username" required="required"/>
+      <input type="password" placeholder="password" required="required"/>
+      <a href="dashboard.html"><button>login</button></a>
+      <p class="message"></p>
+    </form>
+  </div>
+</div>
+<div class="footer">
+  <div class="content">
+    <span class="slow-effect" id="fade-in">ONDO STATE EXECUTIVE REPORT MANAGER</span>
+    <p id="btn">Design by CSDC Systems | C 2018</p>
+  </div>
+
+</div>
+</div>
+ <script src="assets/js/jquery-3.3.1.js"></script>
+ <script type="text/javascript">
+   $(document).ready(function(){
+    setTimeout(function(){
+      $("#fade-in").fadeIn(8000);
+      $("#btn").animate({right: '270px'}, "slow");
+    }, 1000);
+        
+   });
+ </script>
+
+</body>
+</html>
