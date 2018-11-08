@@ -1,0 +1,624 @@
+html{
+	font-size: 26px;
+	line-height: 1.4;
+	background-image: url('../../images/Picture1.jpg'); 
+	background-attachment: fixed;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	min-width: 1200px;
+}
+
+
+
+.wrapper{
+	position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    background-color: transparent;
+}
+
+.navbar{
+	background-color:#ff6f1f; 
+	/*background-color:#000;*/ 
+	color: white; 
+	border-radius: 0;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 12;
+	min-height: 50px;
+	line-height: 50px;
+}
+
+#header{
+	display: flex;
+	align-items: stretch;
+}
+
+.page{
+	height: 100vh;
+	width:100% ;
+	display: flex;
+	
+}
+
+.aside-wrapper{
+	height: 100%; 
+	background-image: url('../../images/Picture1.jpg'); 
+	width: 250px;
+	position: fixed;
+	left: 0;
+	color: white;
+	top:50px;
+}
+
+
+.sidebar{
+	height: 100%;
+	background-color:#192233; 
+	opacity: 0.95; 
+	color: white;
+	padding-top: 30px;
+}
+.sidebar ul li{
+	padding: 25px 0;
+}
+
+.sidebar ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.sidebar ul li i{
+    margin-right: 25px;
+    color: #999;
+    font-size: 18px;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+	margin:0;
+}
+
+.main-wrapper{
+	background-image: url('../../images/Picture1.jpg'); 
+	color: white;  
+	width: calc(100% - 250px);
+	position: absolute;
+	top:50px;
+	right: 0;
+	height: calc(100% - 50px);
+}
+.main{
+	height: 100%;
+	color:#000;
+	padding-top: 25px;
+	position: relative;
+}
+
+.navbrand{
+	font-size: 24px;
+	text-transform: uppercase;
+	width: 250px;
+}
+.navbrand a{
+	color: #fff;
+	text-decoration: none;
+}
+.topnav{
+	width: calc(100% - 250px);
+	text-align: right;
+}
+.topnav ul li{
+	display: inline-block;
+	padding:0 15px;
+}
+.topnav img{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+}
+
+.revenue-stat{
+    margin:0; 
+    padding:7.5px; 
+    font-size: 24px; 
+    font-weight:500;
+}
+
+
+
+.welcome-wrapper{
+	padding: 10px; 
+	position: relative; 
+	height: 400px;
+	color: #717171;
+}
+
+.welcome-wrapper div{
+	width:150px; 
+	position: absolute; 
+	left: 35%; 
+	bottom: 90px;
+}
+
+.welcome-wrapper h3{
+	padding:0; 
+	margin: 0; 
+	font-weight: 500; 
+	position: relative; 
+	bottom: 0;  
+	letter-spacing: 2px
+}
+
+.welcome-wrapper h4{
+	transform: translateX(50%);
+}
+
+.card{
+	display: inline-block;
+    position: relative;
+    margin: 10px 0;
+    box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.14); 
+    border-radius: 0px;
+    color: rgba(0, 0, 0, 0.87);
+    background: white;
+    color: #666;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+
+
+.card-header{
+    padding: 15px;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background: rgba(0,0,0,0.023);
+}
+
+.card-content{
+    position: relative;
+    display: block;
+    /* color: #868e96;*/
+}
+
+.box-shadow-no{
+	box-shadow: none;
+}
+
+.background-transparent{
+	background-color: transparent;
+}
+
+.p-0{
+	padding: 0;
+}
+.m-0{
+	margin: 0;
+}
+
+.social-payer-count{
+	text-align: center; 
+	padding:20px 15px; 
+	color: #fff; 
+	margin-bottom: 5px
+}
+.social-payer-count p {
+	margin:0;
+}
+
+.social-payer-count h3 {
+	margin-top: 7px;
+}
+
+
+
+.form-control{
+	border-radius: 0px;
+}
+.modal{
+	display: none;
+	background-color: rgba(0,0,0, 0.7);
+}
+
+.statistics-content{
+    width: 100%;
+    position: relative;
+    margin:2px auto;
+    padding: 15px;
+    background-color: #fff;
+    color: #6f6c68;
+    animation-name: slideIn;
+    animation-duration: 2s;
+    border-radius: 0px;
+    webkit-box-shadow: 0 0px 0px rgba(0,0,0,0.125);
+    box-shadow: 0 0px 0px rgba(0,0,0,0.125);
+    border: none;
+}
+
+.modal-content{
+    width: 1000px;
+    position: relative;
+    margin:40px auto;
+    color: #6f6c68;
+    animation-name: slideIn;
+    animation-duration: 2s;
+    border-radius: 0px;
+    webkit-box-shadow: 0 0px 0px rgba(0,0,0,0.125);
+    box-shadow: 0 0px 0px rgba(0,0,0,0.125);
+    border: none;
+}
+
+.modal-header{
+    padding: 5px;
+    background-color: #23527c;
+    color: #fff;
+    font-size: 10px!important;
+    text-align: center;
+}
+
+.modal-title{
+	}
+
+.modal-close{
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.modal-header h1{
+    margin: 0;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 0;
+}
+.modal-body{
+    padding: 15px;
+}
+
+.modal-footer{
+    text-align: left;
+    padding: 15px;
+    margin-left: 15px;
+    border:0px;
+
+    
+}
+
+.budget-analysis .links{
+	overflow: hidden; 
+	display: flex; 
+	padding: 0;
+	align-items: center;
+	border-bottom-right-radius: 30px;
+}
+
+.budget-analysis .links span:first-child{
+	width: 30%;
+	float: left; 
+	text-align: center; 
+	background: rgba(0,0,0,0.12); 
+	margin-right: 10px;
+	line-height: 3rem; 
+}
+
+.budget-analysis .links span:last-child{
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.budget-analysis i{
+	font-size:30px;
+	
+}
+
+
+/* Style the tab */
+.budget-analysis .tab {
+    overflow: hidden;
+    background-color: #337ab7;
+    color: #fff;
+    margin-bottom: 20px; 
+}
+
+.budget-analysis .tab button {
+    background-color:inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding:15px;
+    transition: 0.3s;
+    min-width: 20%;
+    text-align: left;
+}
+
+/* Change background color of buttons on hover */
+.budget-analysis .tab button:hover {
+    background-color: #23527c;
+}
+
+/* Create an active/current tablink class */
+.budget-analysis .tab button.active {
+    background-color:#23527c;
+    border-bottom: 2px solid #337ab7;
+
+}
+
+
+.budget-analysis .tabcontent {
+    display: none;
+    padding:0px;
+    border: none;
+    border-top: none;
+    padding-top: 30px;
+}
+
+
+.budget-analysis .tabcontent {
+    animation: fadeEffect 4s; /* Fading effect takes 1 second */
+}
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: #337ab7;
+    color: #fff;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 16px;
+    transition: 0.3s;
+    min-width: 20%;
+    text-align: left;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #23527c;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color:#5cb85c;
+    border-bottom: 2px solid #337ab7;
+
+}
+
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 16px;
+    transition: 0.3s;
+    min-width: 20%;
+    text-align: left;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #23527c;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color:#5cb85c;
+    border-bottom: 2px solid #337ab7;
+
+}
+
+/* Style the tab content */
+.tabcontentx {
+    display: none;
+}
+
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #eee;
+    border-top: none;
+    padding-top: 10px;
+}
+
+.tabcontent ul li{
+	display: flex;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+.tabcontent ul li>div:first-child{
+	width: 20%; 
+	float: left;
+}
+
+#ImportantDetails ul li>div:first-child{
+	width: 20%; 
+	float: left; 
+	margin-right: 10px;
+	background-color:#f3f9f9; 
+	padding: 5px;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+#ImportantDetails ul li>div:last-child{
+	width: 80%; 
+	float: left;
+	font-size: 12px; 
+	background-color:#f3f9f9; 
+	padding: 5px;
+}
+
+
+.tabcontent {
+    animation: fadeEffect 4s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {transform: translate(0);}
+    to {ransform: translate(100%);}
+}
+
+#analysis-table .budget-analysis-search, #analysis-table .budget-revenue-analysis-search{
+display: flex; 
+margin-bottom: 20px; 
+color: #fff;	
+}
+#analysis-table .budget-analysis-search select:nth-child(1){
+width: 50%;  
+padding: 2px;
+color: #000;
+margin-right: 2px;	
+}
+
+#analysis-table .budget-analysis-search select:nth-child(2){
+width: 50%; 
+padding: 2px;
+color: #000;		
+}
+
+#analysis-table .budget-analysis-search select{
+width: 100%; 
+height: auto; 
+border:1px solid #ddd; 
+padding:3px;
+}
+
+
+#analysis-table .budget-revenue-analysis-search div:nth-child(1){
+width: 50%;  
+padding: 2px;
+color: #000;
+}
+
+#analysis-table .budget-revenue-analysis-search div:nth-child(2){
+width: 50%; 
+padding: 2px;
+color: #000;		
+}
+
+#analysis-table .budget-revenue-analysis-search div select{
+height: auto; 
+border:1px solid #ddd; 
+padding:3px;
+}
+
+
+
+#analysis-table table{
+	width:100%;
+	font-size: 12px;
+}
+
+#analysis-table>table, #analysis-table>table>thead>tr>th,  #analysis-table>table>tbody>tr>td{
+	border: 1px solid #ddd;
+	padding: 10px!important;
+	border-collapse: collapse;
+}
+
+#analysis-table>table>tbody>tr:nth-child(odd){
+	background-color: #fff;
+}
+
+
+#analysis-table table{
+	width:100%;
+	font-size: 12px;
+}
+
+#analysis-table>table, #analysis-table>table>thead>tr,  #analysis-table>table>tbody>tr{
+	border: 1px solid #ddd;
+	padding: 10px;
+	border-collapse: collapse;
+}
+
+#Property table{
+	width:100%;
+	font-size: 12px;
+}
+
+#Property table>thead>tr>th , #TaxFolder table>thead>tr>th, #PaymentHistory table>thead>tr>th{
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+#Property table , #Property table>thead>tr>th, #Property table>tbody>tr>td{
+	padding: 5px!important;
+}
+
+#Property>table, #Property>table>thead>tr,  #Property>table>tbody>tr{
+	border: 1px solid #ddd;
+	padding: 10px;
+	border-collapse: collapse;
+}
+
+#Property>table>tbody>tr:nth-child(odd){
+	background-color: #fff;
+}
+
+
+#TaxFolder table{
+	width:100%;
+	font-size: 12px;
+}
+
+#TaxFolder>table, #TaxFolder>table>thead>tr,  #TaxFolder>table>tbody>tr{
+	border: 1px solid #ddd;
+	padding: 10px;
+	border-collapse: collapse;
+}
+
+#TaxFolder table , #TaxFolder table>thead>tr>th, #TaxFolder table>tbody>tr>td{
+	padding: 5px!important;
+}
+
+#TaxFolder>table>tbody>tr:nth-child(odd){
+	background-color: #fff;
+}
+
+
+#PaymentHistory table{
+	width:100%;
+	font-size: 12px;
+}
+
+#PaymentHistory table , #PaymentHistory table>thead>tr>th, #PaymentHistory table>tbody>tr>td{
+	padding: 5px!important;
+}
+
+#PaymentHistory>table, #PaymentHistory>table>thead>tr,  #PaymentHistory>table>tbody>tr{
+	border: 1px solid #ddd;
+	padding: 10px;
+	border-collapse: collapse;
+}
+
+#PaymentHistory>table>tbody>tr:nth-child(odd){
+	background-color: #fff;
+}

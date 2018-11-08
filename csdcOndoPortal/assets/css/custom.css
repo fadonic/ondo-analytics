@@ -11,6 +11,7 @@ body{
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	line-height: 1.4;
+	min-width: 1200px;
 }
 
 
@@ -425,6 +426,11 @@ ul{
 }
 
 /* Style the tab content */
+
+.tabcontentx {
+    display: none;
+}
+
 .tabcontent {
     display: none;
     padding: 6px 12px;

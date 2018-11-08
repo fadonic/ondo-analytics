@@ -59,7 +59,7 @@
                             <a href="taxPayerRegStats.html"><i class="fas fa-users" aria-hidden="true"></i>Tax Payer</a>
                         </li>
                         <li>
-                            <a href="propertyAdvanceSearch.html"><i class="fas fa-home fa-icons" aria-hidden="true"></i>Property</a>
+                            <a href="property.html"><i class="fas fa-home fa-icons" aria-hidden="true"></i>Property</a>
                         </li>
                         <li>
                 <a href="budgetAnalysisReports.html"><i class="fa fa-chart-pie fa-icons" aria-hidden="true"></i>Reports</a>
@@ -141,6 +141,41 @@
                         </div>
                     </section>
 
+                     <section>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card box-shadow-no p-0">
+                                    <div class="card-content text-left" style="overflow: hidden;">
+                                        <div id="container" style="min-height: 300px"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card box-shadow-no p-0">
+                                    <div class="card-content text-left" style="overflow: hidden;">
+                                        <div id="container2" style="min-height: 300px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card box-shadow-no p-0">
+                                    <div class="card-content text-left" style="overflow: hidden;">
+                                        <div id="chart_div_x" style="min-height: 300px">
+                                            
+rrr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
 
                 </div>
             </div>
@@ -156,18 +191,13 @@
             // Set a callback to run when the Google Visualization API is loaded.
             google.charts.setOnLoadCallback(drawChart);
 
-            // Callback that creates and populates a data table,
-            // instantiates the pie chart, passes in the data and
-            // draws it.
             function drawChart() {
-
-                // Create the data table.
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'Revenue');
                 data.addColumn('number', 'Stats');
                 data.addRows([
-                    ['Revenue Collected', 2],
-                    ['Due', 1]
+                    ['Revenue Collected', 700],
+                    ['Due', 500]
                 ]);
 
                 // Set chart options
@@ -303,7 +333,103 @@
             ;
         </script>
 
+        <script type="text/javascript">
+             google.charts.load('current', {packages: ['corechart']}); 
+             function drawChart() {
+            // Define the chart to be drawn.
+            var data = google.visualization.arrayToDataTable([
+               ['MDA', 'Revenue Collected', 'Due'],
+               ['MDA1',  900,      390],
+               ['MDA2',  1000,     400],
+               ['MDA3',  1170,     440],
+               ['MDA4',  1250,     480],
+               ['MDA5',  1530,     540]
+            ]);
 
+            var options = {title: 'Top 5 MDAs (in millions)', isStacked:true};  
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.BarChart(document.getElementById('container'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+
+        </script>
+
+        <script type="text/javascript">
+             google.charts.load('current', {packages: ['corechart']}); 
+             function drawChart() {
+            // Define the chart to be drawn.
+            var data = google.visualization.arrayToDataTable([
+               ['Banks', 'Collections'],
+               ['Bank1',  900, ],
+               ['Bank2',  1000, ],
+               ['Bank3',  1170, ],
+               ['Bank4',  1250, ],
+               ['Bank5',  1530, ]
+            ]);
+
+            var options = {title: 'Top 5 Bank (in millions)', isStacked:true};  
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.BarChart(document.getElementById('container2'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+
+        </script>
+
+      <script type="text/javascript">
+            google.charts.load('current', {'packages': ['corechart', 'bar']});
+            google.charts.setOnLoadCallback(drawStuff);
+
+            function drawStuff() {
+
+                var chartDiv2 = document.getElementById('chart_div_x');
+
+                var data = google.visualization.arrayToDataTable([
+                    ['Year', 'Revenue Collected[N]'],
+                    ['Jan-16', 800],
+                    ['Jan-16', 2400],
+                    ['Jan-16', 3000],
+                    ['Jan-16', 5000],
+                    ['Jan-16', 6000],
+                    ['Jan-16', 7000],
+                    ['Jan-16', 8000],
+                    ['Jan-16', 9000],
+                    ['Jan-16', 10000],
+                    ['Jan-16', 11000],
+                    ['Jan-16', 12000],
+                    ['Jan-16', 13000],
+                    ['Jan-16', 14000],
+                    ['Jan-16', 15000],
+                    ['Jan-16', 16000]
+                ]);
+
+                var classicOptions = {
+                    width: '400px',
+                    height: 300,
+                    series: {
+                        0: {targetAxisIndex: 0},
+                    },
+                    title: 'Revenue Collection trend',
+                    legend: {position: 'top', textStyle: {color: '#337ab7', textTransform: 'uppercase', fontSize: 10}
+                    },
+
+                };
+
+
+                function drawClassicChart2() {
+                    var classicChart = new google.visualization.ColumnChart(chartDiv2);
+                    classicChart.draw(data, classicOptions);
+                    button.innerText = 'Change View';
+                    button.onclick = drawMaterialChart;
+                }
+
+                drawClassicChart2();
+            }
+            ;
+        </script>
 
     </body>
 </html>
